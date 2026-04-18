@@ -1,0 +1,574 @@
+{
+  "meta": {
+    "title": "Sarmadax — We Build Digital Products That Scale",
+    "description": "Sarmadax is a digital agency specializing in SaaS development, custom web applications, mobile apps, UI/UX design, and AI integration."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact",
+    "startProject": "Start a Project",
+    "pricing": "Pricing"
+  },
+  "hero": {
+    "badge": "Digital Agency",
+    "headline1": "We Build Digital",
+    "headline2": "Products That Scale",
+    "subtitle": "From SaaS platforms to custom applications, we craft modern software solutions that drive growth and deliver exceptional user experiences.",
+    "cta1": "Start a Project",
+    "cta2": "Our Services",
+    "scrollDown": "Scroll to explore"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "End-to-end digital solutions tailored to your business needs",
+    "saas": {
+      "title": "SaaS Product Development",
+      "description": "Full-cycle SaaS development from MVP to scale. We build multi-tenant platforms with modern architecture, subscription billing, and analytics dashboards.",
+      "deliverables": "MVP, Admin Dashboard, API, Billing Integration"
+    },
+    "webApp": {
+      "title": "Custom Web Applications",
+      "description": "Bespoke web applications built with cutting-edge technologies. From complex dashboards to real-time collaboration tools, we bring your vision to life.",
+      "deliverables": "Full-Stack App, Database Design, Deployment"
+    },
+    "mobile": {
+      "title": "Mobile App Development",
+      "description": "Cross-platform mobile applications that deliver native performance. Built with React Native for iOS and Android from a single codebase.",
+      "deliverables": "iOS App, Android App, App Store Submission"
+    },
+    "design": {
+      "title": "UI/UX Design & Branding",
+      "description": "User-centered design that converts. We create intuitive interfaces, design systems, and brand identities that make your product stand out.",
+      "deliverables": "UI Design, UX Research, Design System, Brand Identity"
+    },
+    "ai": {
+      "title": "AI Integration & Automation",
+      "description": "Supercharge your product with AI. From chatbots and content generation to data analysis and process automation powered by latest AI models.",
+      "deliverables": "AI Chatbot, Automation Workflows, ML Pipeline"
+    },
+    "api": {
+      "title": "API Development & Integration",
+      "description": "Robust REST and GraphQL APIs that power your ecosystem. We build scalable backends and integrate with third-party services seamlessly.",
+      "deliverables": "API Design, Documentation, Third-party Integrations"
+    },
+    "ecommerce": {
+      "title": "E-Commerce Solutions",
+      "description": "Online stores that sell. Custom e-commerce platforms or Shopify solutions with payment processing, inventory management, and analytics.",
+      "deliverables": "Online Store, Payment Gateway, Inventory System"
+    },
+    "maintenance": {
+      "title": "Maintenance & Support",
+      "description": "Keep your product running smoothly. Ongoing maintenance, performance monitoring, security updates, and feature enhancements on retainer.",
+      "deliverables": "24/7 Monitoring, Bug Fixes, Feature Updates"
+    }
+  },
+  "whyUs": {
+    "title": "Why Sarmadax",
+    "subtitle": "What makes us different",
+    "designCode": {
+      "title": "Design + Code",
+      "description": "We don't just build — we craft. Every project gets both exceptional design and clean, scalable code."
+    },
+    "modernStack": {
+      "title": "Modern Stack",
+      "description": "Built with the latest technologies. React, Next.js, Node.js, AI — we use what works best for your project."
+    },
+    "fastDelivery": {
+      "title": "Fast Delivery",
+      "description": "From concept to launch in weeks, not months. Our agile process keeps things moving without cutting corners."
+    },
+    "ongoingSupport": {
+      "title": "Ongoing Support",
+      "description": "We don't disappear after launch. Continuous support, updates, and improvements to keep your product ahead."
+    }
+  },
+  "process": {
+    "title": "Our Process",
+    "subtitle": "How we bring your ideas to life",
+    "discovery": {
+      "title": "Discovery",
+      "description": "We dive deep into your business, users, and goals to define the perfect solution."
+    },
+    "design": {
+      "title": "Design",
+      "description": "Crafting intuitive interfaces and experiences that users love and that convert."
+    },
+    "develop": {
+      "title": "Develop",
+      "description": "Building with clean, scalable code using modern technologies and best practices."
+    },
+    "deploy": {
+      "title": "Deploy",
+      "description": "Launching your product with confidence — monitored, optimized, and ready to scale."
+    }
+  },
+  "stats": {
+    "projects": "Projects Delivered",
+    "clients": "Happy Clients",
+    "technologies": "Technologies",
+    "experience": "Years Experience"
+  },
+  "featuredProjects": {
+    "title": "Featured Work",
+    "subtitle": "Recent projects we're proud of",
+    "viewAll": "View All Projects",
+    "viewProject": "View Project",
+    "viewCode": "View Code"
+  },
+  "testimonials": {
+    "title": "What Clients Say",
+    "subtitle": "Don't take our word for it"
+  },
+  "cta": {
+    "title": "Ready to Build Something Amazing?",
+    "subtitle": "Let's turn your idea into a product that users love and businesses depend on.",
+    "button": "Start Your Project"
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "A selection of projects that showcase our expertise",
+    "all": "All",
+    "web": "Web",
+    "mobile": "Mobile",
+    "saas": "SaaS",
+    "ai": "AI"
+  },
+  "about": {
+    "title": "About Sarmadax",
+    "subtitle": "The story behind the code",
+    "storyTitle": "Our Story",
+    "story": "Sarmadax was born from a simple belief: great software needs both exceptional design and solid engineering. Founded by a software engineer with a passion for design, we bridge the gap between beautiful interfaces and powerful backends.",
+    "missionTitle": "Our Mission",
+    "mission": "To help businesses transform their ideas into scalable digital products that make a real impact. We combine technical expertise with creative vision to deliver solutions that stand out.",
+    "founderTitle": "The Founder",
+    "founderName": "Ahmed",
+    "founderRole": "Founder & Lead Developer",
+    "founderBio": "A full-stack software engineer and graphic designer with a passion for building products that look stunning and work flawlessly. Specializing in SaaS development, modern web applications, and AI integration.",
+    "valuesTitle": "Our Values",
+    "values": {
+      "quality": {
+        "title": "Quality First",
+        "description": "We never cut corners. Every line of code, every pixel, every interaction is crafted with care."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Open communication throughout the project. You always know where things stand."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We stay ahead of the curve, using the latest technologies and methodologies."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "We're not just a vendor — we're your technology partner invested in your success."
+      }
+    },
+    "techTitle": "Our Tech Stack"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's discuss your next project",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "projectType": "Project Type",
+      "budget": "Budget Range",
+      "message": "Tell us about your project",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "sent": "Message Sent!",
+      "error": "Something went wrong. Please try again."
+    },
+    "projectTypes": {
+      "saas": "SaaS Product",
+      "webApp": "Web Application",
+      "mobile": "Mobile App",
+      "design": "UI/UX Design",
+      "ai": "AI Integration",
+      "ecommerce": "E-Commerce",
+      "other": "Other"
+    },
+    "budgetRanges": {
+      "small": "$1K - $5K",
+      "medium": "$5K - $15K",
+      "large": "$15K - $50K",
+      "enterprise": "$50K+"
+    },
+    "info": {
+      "email": "hello@sarmadax.com",
+      "availability": "Available for new projects",
+      "response": "We respond within 24 hours"
+    }
+  },
+  "footer": {
+    "tagline": "Building digital products that scale.",
+    "services": "Services",
+    "company": "Company",
+    "connect": "Connect",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "heroCards": {
+    "fastDelivery": "Fast Delivery",
+    "weeksNotMonths": "Weeks, not months",
+    "secureCode": "Secure Code",
+    "bestPractices": "Best practices",
+    "scalable": "Scalable",
+    "builtToGrow": "Built to grow",
+    "builtWith": "Built with:"
+  },
+  "heroStats": {
+    "projects": "Projects",
+    "clients": "Clients",
+    "years": "Years"
+  },
+  "heroSkills": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "design": "Design"
+  },
+  "servicesExtra": {
+    "headingHighlight": "digital solutions",
+    "delivers": "Delivers:"
+  },
+  "whyUsExtra": {
+    "desc": "We combine exceptional design with clean engineering to build products that stand out. Our work speaks for itself — delivered on time, built to scale.",
+    "happyClients": "30+ Happy Clients",
+    "countries": "Across 10+ countries"
+  },
+  "processExtra": {
+    "headingHighlight": "ideas to life"
+  },
+  "ctaExtra": {
+    "badge": "Let's get started",
+    "seeWork": "See our work",
+    "noContracts": "No long-term contracts",
+    "transparentPricing": "Transparent pricing",
+    "responseTime": "Response within 24h"
+  },
+  "footerExtra": {
+    "startProject": "Start a project",
+    "startProjectDesc": "Let's build something amazing together.",
+    "getInTouch": "Get in touch",
+    "crafted": "Crafted with precision & passion"
+  },
+  "aboutExtra": {
+    "heading1": "The story behind",
+    "heading2": "the code",
+    "available": "Available for projects",
+    "yearsExpLabel": "Years exp.",
+    "projectsLabel": "Projects",
+    "clientsLabel": "Clients",
+    "skillFullStack": "Full-Stack Dev",
+    "skillUIUX": "UI/UX Design",
+    "skillSaaS": "SaaS Expert",
+    "skillAI": "AI Integration"
+  },
+  "techCategories": {
+    "Frontend": "Frontend",
+    "Backend": "Backend",
+    "Language": "Language",
+    "Database": "Database",
+    "Styling": "Styling",
+    "Animation": "Animation",
+    "Mobile": "Mobile",
+    "AI": "AI",
+    "Payments": "Payments",
+    "Cloud": "Cloud",
+    "Design": "Design"
+  },
+  "servicesPageExtra": {
+    "heading1": "Everything you need to",
+    "heading2": "launch & scale",
+    "notSure": "Not sure what you need?",
+    "notSureDesc": "Let's have a quick call and figure out the best solution for your project together.",
+    "bookCall": "Book a free consultation",
+    "features": {
+      "saas": [
+        "Multi-tenant architecture",
+        "Subscription billing",
+        "Analytics dashboard",
+        "API design"
+      ],
+      "webApp": [
+        "Full-stack development",
+        "Real-time features",
+        "Database design",
+        "Cloud deployment"
+      ],
+      "mobile": [
+        "iOS & Android",
+        "React Native",
+        "Push notifications",
+        "App Store submission"
+      ],
+      "design": [
+        "UI/UX research",
+        "Design systems",
+        "Prototyping",
+        "Brand identity"
+      ],
+      "ai": [
+        "LLM integration",
+        "Custom chatbots",
+        "Automation workflows",
+        "Data pipelines"
+      ],
+      "api": [
+        "REST & GraphQL",
+        "API documentation",
+        "Webhooks",
+        "Third-party integrations"
+      ],
+      "ecommerce": [
+        "Custom storefront",
+        "Payment gateway",
+        "Inventory management",
+        "Analytics"
+      ],
+      "maintenance": [
+        "24/7 monitoring",
+        "Bug fixes",
+        "Performance tuning",
+        "Feature updates"
+      ]
+    }
+  },
+  "portfolioExtra": {
+    "heading1": "Work we're",
+    "heading2": "proud of"
+  },
+  "portfolioProjects": {
+    "saasify": {
+      "title": "SaaSify",
+      "description": "Multi-tenant analytics SaaS with real-time data, subscription billing, and team collaboration features."
+    },
+    "designflow": {
+      "title": "DesignFlow",
+      "description": "Collaborative design tool with real-time whiteboarding, component library, and design system management."
+    },
+    "shopsmart": {
+      "title": "ShopSmart",
+      "description": "E-commerce mobile app with AI recommendations, AR product preview, and one-click checkout."
+    },
+    "chatgenius": {
+      "title": "ChatGenius",
+      "description": "AI-powered customer support platform with GPT-4 integration, custom training, and multi-channel support."
+    },
+    "taskmaster": {
+      "title": "TaskMaster Pro",
+      "description": "Project management tool with Kanban boards, time tracking, invoicing, and team performance analytics."
+    },
+    "fittrack": {
+      "title": "FitTrack Mobile",
+      "description": "Fitness tracking app with workout plans, nutrition logging, progress photos, and social challenges."
+    },
+    "legaldocs": {
+      "title": "LegalDocs AI",
+      "description": "AI-powered document generation and review platform for legal professionals with NLP analysis."
+    },
+    "storebuilder": {
+      "title": "StoreBuilder",
+      "description": "No-code e-commerce platform builder with drag-and-drop interface, multi-currency, and shipping integrations."
+    }
+  },
+  "featuredProjectsData": {
+    "saasify": {
+      "title": "SaaSify Dashboard",
+      "description": "A multi-tenant SaaS analytics platform with real-time data, subscription management, and team collaboration.",
+      "statsUsers": "Users",
+      "statsRevenue": "Revenue",
+      "statsUptime": "Uptime"
+    },
+    "designflow": {
+      "title": "DesignFlow App",
+      "description": "A collaborative design tool for teams — real-time whiteboarding, component library, and design system management.",
+      "statsUsers": "Users",
+      "statsDesigns": "Designs",
+      "statsTeams": "Teams"
+    },
+    "shopsmart": {
+      "title": "ShopSmart Mobile",
+      "description": "A React Native e-commerce app with AI-powered recommendations, AR product preview, and one-click checkout.",
+      "statsDownloads": "Downloads",
+      "statsRating": "Rating",
+      "statsOrders": "Orders"
+    }
+  },
+  "testimonialsData": {
+    "1": {
+      "name": "Sarah Johnson",
+      "role": "CEO, TechStart",
+      "text": "Sarmadax transformed our idea into a production-ready SaaS in just 8 weeks. The quality of both design and code exceeded our expectations. Our users love the interface."
+    },
+    "2": {
+      "name": "Michael Chen",
+      "role": "CTO, DataFlow",
+      "text": "Working with Sarmadax was a game-changer. They built our complex data dashboard with real-time updates and handled every edge case. Truly professional team."
+    },
+    "3": {
+      "name": "Emma Williams",
+      "role": "Founder, StyleApp",
+      "text": "The mobile app they built for us hit 50K downloads in the first month. The UI is stunning, performance is blazing fast, and they were communicative throughout."
+    },
+    "4": {
+      "name": "Ahmed Al-Rashid",
+      "role": "Product Manager, Gulf Tech",
+      "text": "They handled full RTL Arabic support perfectly and delivered an e-commerce platform that now processes thousands of orders daily. Remarkable attention to detail."
+    }
+  },
+  "contactExtra": {
+    "heading1": "Let's build something",
+    "heading2": "amazing",
+    "emailTitle": "Email",
+    "availabilityTitle": "Availability",
+    "responseTitle": "Response",
+    "locationTitle": "Location",
+    "locationValue": "Remote — worldwide",
+    "readyTitle": "Ready to start?",
+    "readyDesc": "Fill out the form and I'll get back to you within 24 hours with a tailored proposal for your project.",
+    "selectType": "Select type…",
+    "selectRange": "Select range…",
+    "messagePlaceholder": "Tell me about your project, goals, and timeline…",
+    "namePlaceholder": "John Doe",
+    "emailPlaceholder": "john@example.com"
+  },
+  "pricingPage": {
+    "badge": "Pricing & Packages",
+    "heading1": "Transparent pricing,",
+    "heading2": "zero surprises",
+    "subtitle": "Fixed-price packages. Know exactly what you get and what you pay — before a single line of code is written.",
+    "spotsLeft": "Only 2 spots open this month",
+    "mostPopular": "Most Popular",
+    "perProject": "per project",
+    "getStarted": "Get Started",
+    "contactUs": "Let's Talk",
+    "plans": {
+      "spark": {
+        "name": "Spark",
+        "tagline": "Landing page or marketing site",
+        "price": "$1,500",
+        "timeline": "5–7 days delivery",
+        "features": [
+          "Up to 5 pages, fully responsive",
+          "Custom UI/UX design",
+          "Contact form + SEO setup",
+          "Performance optimized",
+          "Full source code included",
+          "2 weeks post-launch support"
+        ]
+      },
+      "launch": {
+        "name": "Launch",
+        "tagline": "Full web app or SaaS MVP",
+        "price": "$4,500",
+        "timeline": "3–4 weeks delivery",
+        "features": [
+          "Everything in Spark",
+          "Authentication & user accounts",
+          "Database design & REST API",
+          "Payment integration (Stripe)",
+          "Admin dashboard",
+          "3 revision rounds",
+          "1 month post-launch support",
+          "Priority response"
+        ]
+      },
+      "scale": {
+        "name": "Scale",
+        "tagline": "Complex product & ongoing dev",
+        "price": "Custom",
+        "timeline": "Scoped together",
+        "features": [
+          "Everything in Launch",
+          "Mobile app (iOS & Android)",
+          "AI / ML integration",
+          "Custom complex features",
+          "Dedicated Slack channel",
+          "Monthly dev retainer",
+          "Unlimited revisions",
+          "SLA & priority support"
+        ]
+      }
+    },
+    "allInclude": "Every package includes",
+    "allIncludeItems": [
+      "Full source code ownership",
+      "Mobile-responsive design",
+      "Free 30-min discovery call",
+      "No hidden fees, ever"
+    ],
+    "addOns": "Power-Up Add-ons",
+    "addOnsDesc": "Stack onto any package to extend its scope",
+    "addOn": {
+      "mobile": {
+        "name": "Mobile App",
+        "desc": "React Native for iOS & Android",
+        "price": "+$3,000"
+      },
+      "ai": {
+        "name": "AI Integration",
+        "desc": "Chatbot, automation, or ML pipeline",
+        "price": "+$1,500"
+      },
+      "seo": {
+        "name": "SEO Package",
+        "desc": "Keywords, meta tags, schema markup",
+        "price": "+$500"
+      },
+      "brand": {
+        "name": "Brand Identity",
+        "desc": "Logo, color palette, typography kit",
+        "price": "+$800"
+      },
+      "maintenance": {
+        "name": "Monthly Maintenance",
+        "desc": "Updates, monitoring, bug fixes",
+        "price": "$300/mo"
+      },
+      "priority": {
+        "name": "Priority Support",
+        "desc": "4-hour response time SLA",
+        "price": "$200/mo"
+      }
+    },
+    "howItWorks": "How it works",
+    "howItWorksDesc": "Simple, milestone-based, zero risk",
+    "step1Title": "Book a Free Call",
+    "step1Desc": "30-min discovery session. Tell me about your project, goals, and timeline. No commitment, no pitch.",
+    "step2Title": "Get Your Proposal",
+    "step2Desc": "Custom scope document and fixed-price quote delivered within 24 hours of our call.",
+    "step3Title": "We Build, You Launch",
+    "step3Desc": "50% upfront, 50% when you approve the final product. Not happy? We keep working until you are.",
+    "guarantees": "Our Guarantees",
+    "g1Title": "You Own Everything",
+    "g1Desc": "Full source code, assets, and IP transfer on completion. Zero lock-in, ever.",
+    "g2Title": "Revisions Until Right",
+    "g2Desc": "We don't call it done until you're genuinely happy with every detail. Included.",
+    "g3Title": "Fixed Price",
+    "g3Desc": "The quote is final. No scope creep invoices, no surprise charges. Ever.",
+    "g4Title": "On-Time Delivery",
+    "g4Desc": "We set a delivery date and honor it. If we miss it, the delay is on us.",
+    "faq": "Frequently asked questions",
+    "faq1q": "What if I need changes after launch?",
+    "faq1a": "Every package includes post-launch support — 2 weeks for Spark, 1 month for Launch. Anything beyond that is billed at an agreed hourly rate, which we set upfront.",
+    "faq2q": "How does the 50/50 payment split work?",
+    "faq2a": "50% is due before we start — this covers design and early development. The remaining 50% is only due when you have approved the final product. You hold all the leverage.",
+    "faq3q": "Do I get the source code?",
+    "faq3a": "Yes — 100%. On final payment, all code, assets, and repository access transfer to you. You own everything, forever, no strings attached.",
+    "faq4q": "My project doesn't fit these packages.",
+    "faq4a": "The Scale package is fully custom, and we can build a bespoke quote for any scope. Just book a free call and we will figure it out together.",
+    "faq5q": "How fast can you actually start?",
+    "faq5a": "Within 1–3 business days of the first payment. We keep a limited number of spots open each month to ensure every project gets the full focus it deserves.",
+    "faq6q": "Can you work with an existing codebase?",
+    "faq6a": "Absolutely. We can extend your current codebase or build from your existing design files. We will scope it together on the discovery call.",
+    "ctaTitle": "Ready to build something people love?",
+    "ctaDesc": "Book a free 30-minute discovery call. No pitch, no pressure — just an honest conversation about your project and how to make it real.",
+    "ctaBtn": "Book Free Discovery Call",
+    "ctaEmail": "Or email directly:"
+  }
+}
