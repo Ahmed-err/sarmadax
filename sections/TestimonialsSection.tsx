@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const colors = ["#0ea5e9", "#14b8a6", "#8b5cf6", "#f59e0b"];
-const avatars = ["SJ", "MC", "EW", "AR"];
+const avatars = ["KA", "OA", "RM", "YH"];
 
 export function TestimonialsSection() {
   const t = useTranslations("testimonials");

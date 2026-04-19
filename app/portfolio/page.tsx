@@ -3,14 +3,15 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { ExternalLink, GitBranch, Layers } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CustomCursor } from "@/components/shared/CustomCursor";
 
-type Category = "all" | "web" | "mobile" | "saas" | "ai";
+type Category = "all" | "web" | "saas" | "ecommerce" | "finance";
 
-const categoryKeys: Category[] = ["all", "web", "mobile", "saas", "ai"];
+const categoryKeys: Category[] = ["all", "web", "saas", "ecommerce", "finance"];
 
 const projects: {
   id: string;
@@ -18,15 +19,45 @@ const projects: {
   year: string;
   color: string;
   tags: string[];
+  github: string;
+  live: string | null;
 }[] = [
-  { id: "saasify", category: "saas", year: "2024", color: "#0ea5e9", tags: ["Next.js", "TypeScript", "Prisma", "Stripe"] },
-  { id: "designflow", category: "web", year: "2024", color: "#8b5cf6", tags: ["React", "WebSocket", "Canvas API", "Node.js"] },
-  { id: "shopsmart", category: "mobile", year: "2023", color: "#14b8a6", tags: ["React Native", "AI/ML", "ARKit", "Stripe"] },
-  { id: "chatgenius", category: "ai", year: "2024", color: "#f59e0b", tags: ["Next.js", "OpenAI", "Pinecone", "Redis"] },
-  { id: "taskmaster", category: "saas", year: "2023", color: "#10b981", tags: ["React", "GraphQL", "PostgreSQL", "Docker"] },
-  { id: "fittrack", category: "mobile", year: "2023", color: "#ec4899", tags: ["React Native", "HealthKit", "Node.js", "MongoDB"] },
-  { id: "legaldocs", category: "ai", year: "2024", color: "#6366f1", tags: ["Next.js", "OpenAI", "PDF.js", "Supabase"] },
-  { id: "storebuilder", category: "web", year: "2023", color: "#f97316", tags: ["Next.js", "Prisma", "Stripe", "Cloudflare"] },
+  {
+    id: "electroerp",
+    category: "saas",
+    year: "2026",
+    color: "#0ea5e9",
+    tags: ["Next.js", "PostgreSQL", "Prisma", "NextAuth"],
+    github: "https://github.com/Ahmed-err/ecommerce-accounting-system",
+    live: "https://himmat.store",
+  },
+  {
+    id: "printshop",
+    category: "ecommerce",
+    year: "2026",
+    color: "#8b5cf6",
+    tags: ["React", "Express.js", "MongoDB", "Paymob"],
+    github: "https://github.com/Ahmed-err/Print-Shop",
+    live: "https://harfoushprint.com",
+  },
+  {
+    id: "tajdera",
+    category: "finance",
+    year: "2026",
+    color: "#14b8a6",
+    tags: ["React", "TypeScript", "Vite", "Framer Motion"],
+    github: "https://github.com/Ahmed-err/tajdera",
+    live: null,
+  },
+  {
+    id: "portfolio",
+    category: "web",
+    year: "2026",
+    color: "#f59e0b",
+    tags: ["Next.js", "TypeScript", "Framer Motion", "Resend"],
+    github: "https://github.com/Ahmed-err/SE-PORTFOLIO",
+    live: null,
+  },
 ];
 
 export default function PortfolioPage() {
@@ -82,6 +113,7 @@ export default function PortfolioPage() {
                 <motion.article key={project.id} layout
                   initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ delay: i * 0.05, duration: 0.3 }} className="glass-card group relative overflow-hidden">
+                  <Link href={`/portfolio/${project.id}`} className="absolute inset-0 z-10" aria-label={`View ${project.id} case study`} />
                   <div className="relative flex h-40 items-center justify-center overflow-hidden"
                     style={{ background: `${project.color}12` }}>
                     <div className="bg-dots absolute inset-0 opacity-20" />
@@ -90,14 +122,16 @@ export default function PortfolioPage() {
                       style={{ background: `${project.color}20`, border: `1px solid ${project.color}40` }}>
                       <Layers size={28} style={{ color: project.color }} />
                     </motion.div>
-                    <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                    <div className="absolute inset-0 z-20 flex items-center justify-center gap-3 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
                       style={{ background: "rgba(5,10,15,0.7)", backdropFilter: "blur(4px)" }}>
-                      <a href="#" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20" aria-label="GitHub">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20" aria-label="GitHub">
                         <GitBranch size={14} />
                       </a>
-                      <a href="#" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20" aria-label="Live">
-                        <ExternalLink size={14} />
-                      </a>
+                      {project.live && (
+                        <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20" aria-label="Live">
+                          <ExternalLink size={14} />
+                        </a>
+                      )}
                     </div>
                     <div className="absolute top-3 right-3 rounded-full bg-card/80 px-2 py-0.5 text-xs text-text-muted backdrop-blur-sm">
                       {project.year}

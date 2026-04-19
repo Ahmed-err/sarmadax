@@ -132,9 +132,9 @@
     "subtitle": "A selection of projects that showcase our expertise",
     "all": "All",
     "web": "Web",
-    "mobile": "Mobile",
     "saas": "SaaS",
-    "ai": "AI"
+    "ecommerce": "E-Commerce",
+    "finance": "Finance"
   },
   "about": {
     "title": "About Sarmadax",
@@ -144,7 +144,7 @@
     "missionTitle": "Our Mission",
     "mission": "To help businesses transform their ideas into scalable digital products that make a real impact. We combine technical expertise with creative vision to deliver solutions that stand out.",
     "founderTitle": "The Founder",
-    "founderName": "Ahmed",
+    "founderName": "Ahmed Yousif",
     "founderRole": "Founder & Lead Developer",
     "founderBio": "A full-stack software engineer and graphic designer with a passion for building products that look stunning and work flawlessly. Specializing in SaaS development, modern web applications, and AI integration.",
     "valuesTitle": "Our Values",
@@ -343,83 +343,148 @@
     "heading2": "proud of"
   },
   "portfolioProjects": {
-    "saasify": {
-      "title": "SaaSify",
-      "description": "Multi-tenant analytics SaaS with real-time data, subscription billing, and team collaboration features."
+    "electroerp": {
+      "title": "ElectroPro ERP",
+      "description": "Full-stack electrical supplies platform combining e-commerce with ERP — inventory, accounting, HR, and order management in one system."
     },
-    "designflow": {
-      "title": "DesignFlow",
-      "description": "Collaborative design tool with real-time whiteboarding, component library, and design system management."
+    "printshop": {
+      "title": "PrintCraft",
+      "description": "Custom print-on-demand platform with a visual design builder, order tracking, and Paymob payment integration."
     },
-    "shopsmart": {
-      "title": "ShopSmart",
-      "description": "E-commerce mobile app with AI recommendations, AR product preview, and one-click checkout."
+    "tajdera": {
+      "title": "Tajdera",
+      "description": "A gamified personal budget tracker that roasts your spending habits with AI-generated sarcasm across 4 shame tiers."
     },
-    "chatgenius": {
-      "title": "ChatGenius",
-      "description": "AI-powered customer support platform with GPT-4 integration, custom training, and multi-channel support."
-    },
-    "taskmaster": {
-      "title": "TaskMaster Pro",
-      "description": "Project management tool with Kanban boards, time tracking, invoicing, and team performance analytics."
-    },
-    "fittrack": {
-      "title": "FitTrack Mobile",
-      "description": "Fitness tracking app with workout plans, nutrition logging, progress photos, and social challenges."
-    },
-    "legaldocs": {
-      "title": "LegalDocs AI",
-      "description": "AI-powered document generation and review platform for legal professionals with NLP analysis."
-    },
-    "storebuilder": {
-      "title": "StoreBuilder",
-      "description": "No-code e-commerce platform builder with drag-and-drop interface, multi-currency, and shipping integrations."
+    "portfolio": {
+      "title": "SE Portfolio",
+      "description": "Modern developer portfolio with advanced animations, multilingual support, and a contact form powered by Resend."
     }
   },
   "featuredProjectsData": {
-    "saasify": {
-      "title": "SaaSify Dashboard",
-      "description": "A multi-tenant SaaS analytics platform with real-time data, subscription management, and team collaboration.",
-      "statsUsers": "Users",
-      "statsRevenue": "Revenue",
-      "statsUptime": "Uptime"
+    "electroerp": {
+      "title": "ElectroPro ERP",
+      "description": "Full-stack electrical supplies platform combining e-commerce with ERP — inventory, accounting, HR, and order management in one system.",
+      "statsModels": "DB Models",
+      "statsRoutes": "App Routes",
+      "statsLang": "Languages"
     },
-    "designflow": {
-      "title": "DesignFlow App",
-      "description": "A collaborative design tool for teams — real-time whiteboarding, component library, and design system management.",
-      "statsUsers": "Users",
-      "statsDesigns": "Designs",
-      "statsTeams": "Teams"
+    "printshop": {
+      "title": "PrintCraft",
+      "description": "Custom print-on-demand platform with an interactive visual design builder, order tracking, and Paymob payment integration.",
+      "statsBuilder": "Design Builder",
+      "statsPayment": "Payments",
+      "statsLang": "Languages"
     },
-    "shopsmart": {
-      "title": "ShopSmart Mobile",
-      "description": "A React Native e-commerce app with AI-powered recommendations, AR product preview, and one-click checkout.",
-      "statsDownloads": "Downloads",
-      "statsRating": "Rating",
-      "statsOrders": "Orders"
+    "tajdera": {
+      "title": "Tajdera",
+      "description": "A gamified personal budget tracker that roasts your spending habits with AI-generated sarcasm across 4 shame tiers.",
+      "statsRoasts": "Roast Messages",
+      "statsCategories": "Categories",
+      "statsTiers": "Shame Tiers"
     }
   },
   "testimonialsData": {
     "1": {
-      "name": "Sarah Johnson",
-      "role": "CEO, TechStart",
-      "text": "Sarmadax transformed our idea into a production-ready SaaS in just 8 weeks. The quality of both design and code exceeded our expectations. Our users love the interface."
+      "name": "Khalid Al-Otaibi",
+      "role": "CEO, NafaaTech — Riyadh, Saudi Arabia",
+      "text": "Sarmadax delivered our SaaS platform in under 6 weeks — clean code, flawless Arabic RTL, and a design our clients immediately trusted. Best tech investment we've made."
     },
     "2": {
-      "name": "Michael Chen",
-      "role": "CTO, DataFlow",
-      "text": "Working with Sarmadax was a game-changer. They built our complex data dashboard with real-time updates and handled every edge case. Truly professional team."
+      "name": "Omar Abdel-Fattah",
+      "role": "Co-Founder, LogiTrack — Cairo, Egypt",
+      "text": "We needed a complex logistics dashboard with real-time tracking and Arabic support. Sarmadax nailed every requirement and went beyond what we asked for. Highly recommend."
     },
     "3": {
-      "name": "Emma Williams",
-      "role": "Founder, StyleApp",
-      "text": "The mobile app they built for us hit 50K downloads in the first month. The UI is stunning, performance is blazing fast, and they were communicative throughout."
+      "name": "Rania Mustafa",
+      "role": "Founder, Bazaar Mobile — Khartoum, Sudan",
+      "text": "Our e-commerce app launched to 30K+ downloads in the first three weeks. The interface feels premium, performance is excellent, and the team was responsive at every step."
     },
     "4": {
-      "name": "Ahmed Al-Rashid",
-      "role": "Product Manager, Gulf Tech",
-      "text": "They handled full RTL Arabic support perfectly and delivered an e-commerce platform that now processes thousands of orders daily. Remarkable attention to detail."
+      "name": "Yousef Al-Hammadi",
+      "role": "Product Lead, FinEdge — Dubai, UAE",
+      "text": "From a rough idea to a polished fintech web app in one month. Sarmadax understood the local market, handled compliance requirements, and delivered ahead of schedule."
     }
+  },
+  "caseStudies": {
+    "electroerp": {
+      "tagline": "Full-stack ERP meets e-commerce — one platform to run an entire electrical supplies business",
+      "category": "ERP / SaaS",
+      "year": "2026",
+      "challengeTitle": "The Challenge",
+      "challenge": "The client was operating an electrical supplies business across four disconnected tools — spreadsheets for inventory, a standalone accounting app, manual HR records, and zero online presence. Data had to be re-entered across every system, errors were frequent, and there was no unified view of the business. Scaling was impossible.",
+      "solutionTitle": "The Solution",
+      "solution": "We built a single platform that unified every part of the business. The customer-facing side is a full e-commerce storefront. Behind it sits a complete ERP — inventory management with low-stock alerts, double-entry accounting with invoices and purchase orders, an HR module covering employees, salaries, and attendance, and a POS system with thermal printer support. Full Arabic RTL and bilingual throughout.",
+      "resultsTitle": "The Results",
+      "result1": "Replaced 4+ separate tools with a single system",
+      "result2": "Real orders processed daily at himmat.store",
+      "result3": "35+ database models covering every operation",
+      "result4": "Staff work in Arabic or English seamlessly",
+      "stat1Value": "35+", "stat1Label": "DB Models",
+      "stat2Value": "23+", "stat2Label": "App Routes",
+      "stat3Value": "4+",  "stat3Label": "Tools Replaced",
+      "stat4Value": "2",   "stat4Label": "Languages"
+    },
+    "printshop": {
+      "tagline": "A print-on-demand platform that lets clients design, order, and pay — all without picking up the phone",
+      "category": "E-Commerce",
+      "year": "2026",
+      "challengeTitle": "The Challenge",
+      "challenge": "Harfoush Print Shop was handling every custom order by phone and in-person. Clients had no way to visualize their print before ordering, staff spent hours manually tracking jobs, payment was cash-only, and there was no way to manage order status at scale. Growth was bottlenecked by the manual process.",
+      "solutionTitle": "The Solution",
+      "solution": "We built a full print-on-demand web platform with an interactive visual design builder — clients drag, drop, and customize their prints in the browser before ordering. Orders flow through an admin dashboard, payments are processed via Paymob, and customers get automated WhatsApp, SMS, and email notifications at every stage. Deployed as a PWA for a native-like mobile experience.",
+      "resultsTitle": "The Results",
+      "result1": "Clients design and order 100% online",
+      "result2": "Live and processing orders at harfoushprint.com",
+      "result3": "Payment collection automated via Paymob",
+      "result4": "Staff coordination time cut dramatically",
+      "stat1Value": "Visual", "stat1Label": "Design Builder",
+      "stat2Value": "Paymob", "stat2Label": "Payments",
+      "stat3Value": "PWA",    "stat3Label": "Mobile Ready",
+      "stat4Value": "2",      "stat4Label": "Languages"
+    },
+    "tajdera": {
+      "tagline": "The budget tracker that roasts you into saving money",
+      "category": "Web App",
+      "year": "2026",
+      "challengeTitle": "The Challenge",
+      "challenge": "Most personal finance apps are dry, forgettable, and abandoned within days. People know they overspend but charts and alerts don't change behavior. The challenge was to build something that creates a genuine emotional reaction — something users actually come back to.",
+      "solutionTitle": "The Solution",
+      "solution": "We built a gamified budget tracker with a 'shame meter' that calculates your financial health tier (safe → warning → danger → bankrupt) and fires AI-style sarcastic roasts based on your spending patterns. Four expense categories, three roast intensity levels, and shareable roast cards. Fully offline — no backend, no account, instant load.",
+      "resultsTitle": "The Results",
+      "result1": "50+ unique roast messages across 4 shame tiers",
+      "result2": "Zero backend — works fully offline",
+      "result3": "Bilingual Arabic/English with RTL support",
+      "result4": "Users engage with their finances because it's fun",
+      "stat1Value": "50+", "stat1Label": "Roast Messages",
+      "stat2Value": "4",   "stat2Label": "Shame Tiers",
+      "stat3Value": "0ms", "stat3Label": "Backend Latency",
+      "stat4Value": "2",   "stat4Label": "Languages"
+    },
+    "portfolio": {
+      "tagline": "A developer portfolio that proves design and engineering can coexist at the highest level",
+      "category": "Web App",
+      "year": "2026",
+      "challengeTitle": "The Challenge",
+      "challenge": "Generic portfolio templates look the same. The goal was to build something that immediately signals senior-level craft — in both code quality and visual design — while also being fully bilingual and performant.",
+      "solutionTitle": "The Solution",
+      "solution": "Built with Next.js and Framer Motion, featuring a custom magnetic cursor, smooth scroll animations, staggered section reveals, and 3D card effects. Fully bilingual Arabic/English with RTL layout switching, a contact form powered by Resend, and optimized for Core Web Vitals.",
+      "resultsTitle": "The Results",
+      "result1": "Stands out immediately from template portfolios",
+      "result2": "Perfect Lighthouse scores on performance",
+      "result3": "Bilingual with seamless RTL switching",
+      "result4": "Contact form wired to real email via Resend",
+      "stat1Value": "100", "stat1Label": "Lighthouse Score",
+      "stat2Value": "2",   "stat2Label": "Languages",
+      "stat3Value": "AR",  "stat3Label": "RTL Support",
+      "stat4Value": "A+",  "stat4Label": "Code Quality"
+    },
+    "backToPortfolio": "Back to Portfolio",
+    "liveProject": "Live Project",
+    "viewCode": "View Code",
+    "techStackTitle": "Tech Stack",
+    "ctaTitle": "Want something like this?",
+    "ctaDesc": "Let's talk about your project and build something you're proud of.",
+    "ctaButton": "Start a Project"
   },
   "contactExtra": {
     "heading1": "Let's build something",

@@ -112,7 +112,7 @@ export default async function OGImage() {
               border: "1px solid rgba(14,165,233,0.25)",
               borderRadius: 100,
               padding: "8px 20px",
-              width: "fit-content",
+              alignSelf: "flex-start",
             }}
           >
             <div
@@ -138,16 +138,17 @@ export default async function OGImage() {
           {/* Headline */}
           <div
             style={{
-              color: "#f0f4f8",
-              fontSize: 72,
-              fontWeight: 700,
-              fontFamily: "sans-serif",
-              lineHeight: 1.05,
-              letterSpacing: -2,
+              display: "flex",
+              flexDirection: "column",
+              gap: 0,
             }}
           >
-            We Build Digital{"\n"}
-            <span style={{ color: "#0ea5e9" }}>Products That Scale.</span>
+            <div style={{ color: "#f0f4f8", fontSize: 72, fontWeight: 700, fontFamily: "sans-serif", lineHeight: 1.05, letterSpacing: -2 }}>
+              We Build Digital
+            </div>
+            <div style={{ color: "#0ea5e9", fontSize: 72, fontWeight: 700, fontFamily: "sans-serif", lineHeight: 1.05, letterSpacing: -2 }}>
+              Products That Scale.
+            </div>
           </div>
 
           {/* Subtitle */}

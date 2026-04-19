@@ -6,25 +6,37 @@ import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, GitBranch, ExternalLink, Layers } from "lucide-react";
 
-const projectIds = ["saasify", "designflow", "shopsmart"] as const;
+const projectIds = ["electroerp", "printshop", "tajdera"] as const;
 const colors = ["#0ea5e9", "#8b5cf6", "#14b8a6"];
 const gradients = ["from-sky-500/20 to-cyan-500/10", "from-violet-500/20 to-purple-500/10", "from-teal-500/20 to-emerald-500/10"];
-const categories = ["SaaS", "Web App", "Mobile"];
+const categories = ["ERP / SaaS", "E-Commerce", "Web App"];
 const statKeys = [
-  [["statsUsers", "10K+"], ["statsRevenue", "$50K"], ["statsUptime", "99.9%"]],
-  [["statsUsers", "5K+"], ["statsDesigns", "100K+"], ["statsTeams", "500+"]],
-  [["statsDownloads", "50K+"], ["statsRating", "4.9★"], ["statsOrders", "200K+"]],
+  [["statsModels", "35+"], ["statsRoutes", "23+"], ["statsLang", "2"]],
+  [["statsBuilder", "Visual"], ["statsPayment", "Paymob"], ["statsLang", "2"]],
+  [["statsRoasts", "50+"], ["statsCategories", "4"], ["statsTiers", "4"]],
 ] as const;
 const tagSets = [
-  ["Next.js", "TypeScript", "Prisma", "Stripe"],
-  ["React", "WebSocket", "Canvas API", "Node.js"],
-  ["React Native", "AI/ML", "AR Kit", "Stripe"],
+  ["Next.js", "PostgreSQL", "Prisma", "NextAuth"],
+  ["React", "Express.js", "MongoDB", "Paymob"],
+  ["React", "TypeScript", "Vite", "Framer Motion"],
+];
+const githubUrls = [
+  "https://github.com/Ahmed-err/ecommerce-accounting-system",
+  "https://github.com/Ahmed-err/Print-Shop",
+  "https://github.com/Ahmed-err/tajdera",
+];
+const liveUrls = [
+  "https://himmat.store",
+  "https://harfoushprint.com",
+  null,
 ];
 
 function ProjectCard({ id, index }: { id: (typeof projectIds)[number]; index: number }) {
   const t = useTranslations(`featuredProjectsData.${id}`);
   const [hovered, setHovered] = useState(false);
   const color = colors[index];
+  const githubUrl = githubUrls[index];
+  const liveUrl = liveUrls[index];
 
   return (
     <motion.div
@@ -58,14 +70,16 @@ function ProjectCard({ id, index }: { id: (typeof projectIds)[number]; index: nu
               className="absolute inset-0 flex items-center justify-center gap-3"
               style={{ background: "rgba(5, 10, 15, 0.6)", backdropFilter: "blur(4px)" }}
             >
-              <motion.a href="#" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.05 }}
+              <motion.a href={githubUrl} target="_blank" rel="noopener noreferrer" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.05 }}
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20" aria-label="View on GitHub">
                 <GitBranch size={16} />
               </motion.a>
-              <motion.a href="#" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.1 }}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20" aria-label="View live">
-                <ExternalLink size={16} />
-              </motion.a>
+              {liveUrl && (
+                <motion.a href={liveUrl} target="_blank" rel="noopener noreferrer" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.1 }}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20" aria-label="View live">
+                  <ExternalLink size={16} />
+                </motion.a>
+              )}
             </motion.div>
           )}
         </AnimatePresence>

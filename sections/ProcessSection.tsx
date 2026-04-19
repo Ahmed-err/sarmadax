@@ -22,7 +22,7 @@ export function ProcessSection() {
         className="pointer-events-none absolute left-1/2 top-0 h-px w-1/2 -translate-x-1/2"
         style={{ background: "linear-gradient(90deg, transparent, var(--accent), transparent)" }}
       />
-      <div className="mx-auto max-w-7xl px-6" ref={containerRef}>
+      <div className="relative mx-auto max-w-7xl px-6" ref={containerRef}>
         <div className="mb-16 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
