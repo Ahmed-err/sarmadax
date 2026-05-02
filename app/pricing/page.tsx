@@ -73,7 +73,7 @@ export default function PricingPage() {
     <>
       <CustomCursor />
       <Navbar />
-      <main className="min-h-screen pt-28 pb-24">
+      <main id="main" className="min-h-screen pt-28 pb-24">
         <div className="mx-auto max-w-7xl px-6">
 
           {/* Hero */}

@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Code2, Palette, Heart, Star, Award, CheckCircle2 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -35,7 +36,7 @@ export default function AboutPage() {
     <>
       <CustomCursor />
       <Navbar />
-      <main className="min-h-screen pt-28 pb-24">
+      <main id="main" className="min-h-screen pt-28 pb-24">
         <div className="mx-auto max-w-7xl px-6">
           {/* Header */}
           <div className="mb-20 text-center">
@@ -79,9 +80,14 @@ export default function AboutPage() {
                 style={{ background: "linear-gradient(135deg, var(--gradient-start)15, var(--gradient-end)10)", borderRight: "1px solid var(--border)" }}>
                 <div className="absolute h-48 w-48 rounded-full border border-border opacity-30"
                   style={{ animation: "rotate-gradient 20s linear infinite" }} />
-                <div className="relative mb-4 flex h-24 w-24 items-center justify-center rounded-full text-3xl font-bold text-white"
-                  style={{ background: "linear-gradient(135deg, var(--gradient-start), var(--gradient-end))" }}>
-                  {t("founderName")[0]}
+                <div className="relative mb-4 h-24 w-24 overflow-hidden rounded-full ring-2 ring-border">
+                  <Image
+                    src="/images/avatar.png"
+                    alt={t("founderName")}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <div className="text-center">
                   <div className="text-lg font-bold text-foreground">{t("founderName")}</div>

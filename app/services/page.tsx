@@ -23,7 +23,7 @@ export default function ServicesPage() {
     <>
       <CustomCursor />
       <Navbar />
-      <main className="min-h-screen pt-28 pb-24">
+      <main id="main" className="min-h-screen pt-28 pb-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-20 text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}

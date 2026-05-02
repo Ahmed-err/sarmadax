@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <CustomCursor />
       <Navbar />
-      <main>
+      <main id="main">
         <HeroSection />
         <StatsSection />
         <ServicesSection />

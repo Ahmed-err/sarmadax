@@ -14,8 +14,8 @@
   },
   "hero": {
     "badge": "Digital Agency",
-    "headline1": "We Build Digital",
-    "headline2": "Products That Scale",
+    "headline1": "Digital Products",
+    "headline2": "Built to Scale",
     "subtitle": "From SaaS platforms to custom applications, we craft modern software solutions that drive growth and deliver exceptional user experiences.",
     "cta1": "Start a Project",
     "cta2": "Our Services",
@@ -199,6 +199,8 @@
     },
     "info": {
       "email": "hello@sarmadax.com",
+      "whatsapp": "+20 109 498 5025",
+      "phone": "+20 109 498 5025",
       "availability": "Available for new projects",
       "response": "We respond within 24 hours"
     }
@@ -352,12 +354,16 @@
       "description": "Custom print-on-demand platform with a visual design builder, order tracking, and Paymob payment integration."
     },
     "tajdera": {
-      "title": "Tajdera",
-      "description": "A gamified personal budget tracker that roasts your spending habits with AI-generated sarcasm across 4 shame tiers."
+      "title": "Girishatk",
+      "description": "A gamified Sudanese budget tracker with a shame meter, sarcastic AI roasts, and four spending tiers — works fully offline."
     },
     "portfolio": {
       "title": "SE Portfolio",
       "description": "Modern developer portfolio with advanced animations, multilingual support, and a contact form powered by Resend."
+    },
+    "rudd": {
+      "title": "Rudd",
+      "description": "AI-powered WhatsApp appointment agent — connects to Google Calendar and handles bookings, reminders, and lead qualification automatically."
     }
   },
   "featuredProjectsData": {
@@ -376,11 +382,18 @@
       "statsLang": "Languages"
     },
     "tajdera": {
-      "title": "Tajdera",
-      "description": "A gamified personal budget tracker that roasts your spending habits with AI-generated sarcasm across 4 shame tiers.",
+      "title": "Girishatk",
+      "description": "A gamified Sudanese budget tracker that roasts your spending habits with sarcastic AI messages and a real-time financial shame meter.",
       "statsRoasts": "Roast Messages",
       "statsCategories": "Categories",
       "statsTiers": "Shame Tiers"
+    },
+    "rudd": {
+      "title": "Rudd",
+      "description": "SaaS platform that connects WhatsApp and Google Calendar so an AI agent handles bookings and lead qualification 24/7 — no staff needed.",
+      "statsAvail": "AI Availability",
+      "statsBooking": "Booking Type",
+      "statsInteg": "Integrations"
     }
   },
   "testimonialsData": {
@@ -419,10 +432,14 @@
       "result2": "Real orders processed daily at himmat.store",
       "result3": "35+ database models covering every operation",
       "result4": "Staff work in Arabic or English seamlessly",
-      "stat1Value": "35+", "stat1Label": "DB Models",
-      "stat2Value": "23+", "stat2Label": "App Routes",
-      "stat3Value": "4+",  "stat3Label": "Tools Replaced",
-      "stat4Value": "2",   "stat4Label": "Languages"
+      "stat1Value": "35+",
+      "stat1Label": "DB Models",
+      "stat2Value": "23+",
+      "stat2Label": "App Routes",
+      "stat3Value": "4+",
+      "stat3Label": "Tools Replaced",
+      "stat4Value": "2",
+      "stat4Label": "Languages"
     },
     "printshop": {
       "tagline": "A print-on-demand platform that lets clients design, order, and pay — all without picking up the phone",
@@ -437,13 +454,17 @@
       "result2": "Live and processing orders at harfoushprint.com",
       "result3": "Payment collection automated via Paymob",
       "result4": "Staff coordination time cut dramatically",
-      "stat1Value": "Visual", "stat1Label": "Design Builder",
-      "stat2Value": "Paymob", "stat2Label": "Payments",
-      "stat3Value": "PWA",    "stat3Label": "Mobile Ready",
-      "stat4Value": "2",      "stat4Label": "Languages"
+      "stat1Value": "Visual",
+      "stat1Label": "Design Builder",
+      "stat2Value": "Paymob",
+      "stat2Label": "Payments",
+      "stat3Value": "PWA",
+      "stat3Label": "Mobile Ready",
+      "stat4Value": "2",
+      "stat4Label": "Languages"
     },
     "tajdera": {
-      "tagline": "The budget tracker that roasts you into saving money",
+      "tagline": "The Sudanese budget tracker that roasts you into saving money",
       "category": "Web App",
       "year": "2026",
       "challengeTitle": "The Challenge",
@@ -455,10 +476,14 @@
       "result2": "Zero backend — works fully offline",
       "result3": "Bilingual Arabic/English with RTL support",
       "result4": "Users engage with their finances because it's fun",
-      "stat1Value": "50+", "stat1Label": "Roast Messages",
-      "stat2Value": "4",   "stat2Label": "Shame Tiers",
-      "stat3Value": "0ms", "stat3Label": "Backend Latency",
-      "stat4Value": "2",   "stat4Label": "Languages"
+      "stat1Value": "50+",
+      "stat1Label": "Roast Messages",
+      "stat2Value": "4",
+      "stat2Label": "Shame Tiers",
+      "stat3Value": "0ms",
+      "stat3Label": "Backend Latency",
+      "stat4Value": "2",
+      "stat4Label": "Languages"
     },
     "portfolio": {
       "tagline": "A developer portfolio that proves design and engineering can coexist at the highest level",
@@ -473,10 +498,14 @@
       "result2": "Perfect Lighthouse scores on performance",
       "result3": "Bilingual with seamless RTL switching",
       "result4": "Contact form wired to real email via Resend",
-      "stat1Value": "100", "stat1Label": "Lighthouse Score",
-      "stat2Value": "2",   "stat2Label": "Languages",
-      "stat3Value": "AR",  "stat3Label": "RTL Support",
-      "stat4Value": "A+",  "stat4Label": "Code Quality"
+      "stat1Value": "100",
+      "stat1Label": "Lighthouse Score",
+      "stat2Value": "2",
+      "stat2Label": "Languages",
+      "stat3Value": "AR",
+      "stat3Label": "RTL Support",
+      "stat4Value": "A+",
+      "stat4Label": "Code Quality"
     },
     "backToPortfolio": "Back to Portfolio",
     "liveProject": "Live Project",
@@ -484,12 +513,36 @@
     "techStackTitle": "Tech Stack",
     "ctaTitle": "Want something like this?",
     "ctaDesc": "Let's talk about your project and build something you're proud of.",
-    "ctaButton": "Start a Project"
+    "ctaButton": "Start a Project",
+    "rudd": {
+      "tagline": "Your WhatsApp, powered by AI — books appointments and qualifies leads while you sleep",
+      "category": "AI SaaS",
+      "year": "2026",
+      "challengeTitle": "The Challenge",
+      "challenge": "Small business owners in MENA lose dozens of leads every week because they can't respond to WhatsApp inquiries fast enough. Manually booking appointments, sending reminders, and following up with leads is a full-time job — one most businesses can't afford to staff properly.",
+      "solutionTitle": "The Solution",
+      "solution": "Rudd connects to your WhatsApp Business account and Google Calendar, then deploys an AI agent that handles the entire booking flow conversationally — in Arabic or English. It qualifies the lead, checks calendar availability, books the appointment, and sends confirmation — all without human intervention. Built on Next.js 15, OpenAI function calling, Inngest for durable async workflows, and Clerk for multi-tenant auth.",
+      "resultsTitle": "The Results",
+      "result1": "Businesses capture leads 24/7 with zero staff overhead",
+      "result2": "AI handles full booking conversation in Arabic and English",
+      "result3": "Google Calendar synced — no double bookings ever",
+      "result4": "Durable workflows survive server restarts and timeouts",
+      "stat1Value": "24/7",
+      "stat1Label": "AI Availability",
+      "stat2Value": "Auto",
+      "stat2Label": "Booking Type",
+      "stat3Value": "3+",
+      "stat3Label": "API Integrations",
+      "stat4Value": "2",
+      "stat4Label": "Languages"
+    }
   },
   "contactExtra": {
     "heading1": "Let's build something",
     "heading2": "amazing",
     "emailTitle": "Email",
+    "whatsappTitle": "WhatsApp",
+    "phoneTitle": "Phone / Call",
     "availabilityTitle": "Availability",
     "responseTitle": "Response",
     "locationTitle": "Location",
@@ -635,5 +688,9 @@
     "ctaDesc": "Book a free 30-minute discovery call. No pitch, no pressure — just an honest conversation about your project and how to make it real.",
     "ctaBtn": "Book Free Discovery Call",
     "ctaEmail": "Or email directly:"
+  },
+  "common": {
+    "chatWithUs": "Chat with us",
+    "skipToContent": "Skip to content"
   }
 }

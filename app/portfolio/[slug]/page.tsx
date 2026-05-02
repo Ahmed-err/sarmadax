@@ -17,41 +17,7 @@ import {
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CustomCursor } from "@/components/shared/CustomCursor";
-
-const projects: Record<
-  string,
-  {
-    color: string;
-    tags: string[];
-    github: string;
-    live: string | null;
-  }
-> = {
-  electroerp: {
-    color: "#0ea5e9",
-    tags: ["Next.js", "PostgreSQL", "Prisma", "NextAuth", "Cloudinary", "Stripe", "Nodemailer"],
-    github: "https://github.com/Ahmed-err/ecommerce-accounting-system",
-    live: "https://himmat.store",
-  },
-  printshop: {
-    color: "#8b5cf6",
-    tags: ["React", "Express.js", "MongoDB", "Paymob", "Cloudinary", "Twilio", "Railway"],
-    github: "https://github.com/Ahmed-err/Print-Shop",
-    live: "https://harfoushprint.com",
-  },
-  tajdera: {
-    color: "#14b8a6",
-    tags: ["React", "TypeScript", "Vite", "Framer Motion", "Tailwind CSS", "LocalStorage"],
-    github: "https://github.com/Ahmed-err/tajdera",
-    live: null,
-  },
-  portfolio: {
-    color: "#f59e0b",
-    tags: ["Next.js", "TypeScript", "Framer Motion", "next-intl", "Tailwind CSS", "Resend"],
-    github: "https://github.com/Ahmed-err/SE-PORTFOLIO",
-    live: null,
-  },
-};
+import { projectMap } from "@/lib/projects";
 
 const fade = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0 } };
 
@@ -60,7 +26,7 @@ export default function CaseStudyPage() {
   const rawSlug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
   if (!rawSlug) notFound();
   const slug = rawSlug;
-  const project = projects[slug as keyof typeof projects];
+  const project = projectMap[slug];
   if (!project) notFound();
 
   const t = useTranslations(`caseStudies.${slug}`);
@@ -85,7 +51,7 @@ export default function CaseStudyPage() {
     <>
       <CustomCursor />
       <Navbar />
-      <main className="min-h-screen pb-24 pt-28">
+      <main id="main" className="min-h-screen pb-24 pt-28">
         <div className="mx-auto max-w-4xl px-6">
 
           {/* Back link */}

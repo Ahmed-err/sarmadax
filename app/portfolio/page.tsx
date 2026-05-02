@@ -1,64 +1,19 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { ExternalLink, GitBranch, Layers } from "lucide-react";
+import { ExternalLink, GitBranch } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CustomCursor } from "@/components/shared/CustomCursor";
+import { projects, type ProjectCategory } from "@/lib/projects";
 
-type Category = "all" | "web" | "saas" | "ecommerce" | "finance";
+type Category = "all" | ProjectCategory;
 
 const categoryKeys: Category[] = ["all", "web", "saas", "ecommerce", "finance"];
-
-const projects: {
-  id: string;
-  category: Category;
-  year: string;
-  color: string;
-  tags: string[];
-  github: string;
-  live: string | null;
-}[] = [
-  {
-    id: "electroerp",
-    category: "saas",
-    year: "2026",
-    color: "#0ea5e9",
-    tags: ["Next.js", "PostgreSQL", "Prisma", "NextAuth"],
-    github: "https://github.com/Ahmed-err/ecommerce-accounting-system",
-    live: "https://himmat.store",
-  },
-  {
-    id: "printshop",
-    category: "ecommerce",
-    year: "2026",
-    color: "#8b5cf6",
-    tags: ["React", "Express.js", "MongoDB", "Paymob"],
-    github: "https://github.com/Ahmed-err/Print-Shop",
-    live: "https://harfoushprint.com",
-  },
-  {
-    id: "tajdera",
-    category: "finance",
-    year: "2026",
-    color: "#14b8a6",
-    tags: ["React", "TypeScript", "Vite", "Framer Motion"],
-    github: "https://github.com/Ahmed-err/tajdera",
-    live: null,
-  },
-  {
-    id: "portfolio",
-    category: "web",
-    year: "2026",
-    color: "#f59e0b",
-    tags: ["Next.js", "TypeScript", "Framer Motion", "Resend"],
-    github: "https://github.com/Ahmed-err/SE-PORTFOLIO",
-    live: null,
-  },
-];
 
 export default function PortfolioPage() {
   const t = useTranslations("portfolio");
@@ -72,7 +27,7 @@ export default function PortfolioPage() {
     <>
       <CustomCursor />
       <Navbar />
-      <main className="min-h-screen pt-28 pb-24">
+      <main id="main" className="min-h-screen pt-28 pb-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-16 text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
@@ -93,7 +48,8 @@ export default function PortfolioPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             className="mb-10 flex flex-wrap justify-center gap-2">
             {categoryKeys.map((cat) => (
-              <button key={cat} onClick={() => setActive(cat)}
+              <button key={cat} type="button" onClick={() => setActive(cat)}
+                aria-pressed={active === cat}
                 className="relative rounded-full px-5 py-2 text-sm font-medium transition-colors"
                 style={{ color: active === cat ? "white" : "var(--text-secondary)" }}>
                 {active === cat && (
@@ -107,21 +63,23 @@ export default function PortfolioPage() {
             ))}
           </motion.div>
 
-          <motion.div layout className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <motion.div layout className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             <AnimatePresence mode="popLayout">
               {filtered.map((project, i) => (
                 <motion.article key={project.id} layout
                   initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ delay: i * 0.05, duration: 0.3 }} className="glass-card group relative overflow-hidden">
                   <Link href={`/portfolio/${project.id}`} className="absolute inset-0 z-10" aria-label={`View ${project.id} case study`} />
-                  <div className="relative flex h-40 items-center justify-center overflow-hidden"
-                    style={{ background: `${project.color}12` }}>
-                    <div className="bg-dots absolute inset-0 opacity-20" />
-                    <motion.div whileHover={{ scale: 1.15, rotate: 5 }} transition={{ duration: 0.3 }}
-                      className="flex h-16 w-16 items-center justify-center rounded-2xl"
-                      style={{ background: `${project.color}20`, border: `1px solid ${project.color}40` }}>
-                      <Layers size={28} style={{ color: project.color }} />
-                    </motion.div>
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={project.screenshot}
+                      alt={tp(`${project.id}.title`)}
+                      fill
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      quality={70}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                     <div className="absolute inset-0 z-20 flex items-center justify-center gap-3 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
                       style={{ background: "rgba(5,10,15,0.7)", backdropFilter: "blur(4px)" }}>
                       <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20" aria-label="GitHub">
@@ -133,7 +91,8 @@ export default function PortfolioPage() {
                         </a>
                       )}
                     </div>
-                    <div className="absolute top-3 right-3 rounded-full bg-card/80 px-2 py-0.5 text-xs text-text-muted backdrop-blur-sm">
+                    <div className="absolute top-3 right-3 rounded-full px-2.5 py-1 text-xs font-medium text-white z-20"
+                      style={{ background: `${project.color}cc` }}>
                       {project.year}
                     </div>
                   </div>

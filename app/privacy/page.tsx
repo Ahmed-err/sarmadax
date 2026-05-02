@@ -388,7 +388,7 @@ export default async function PrivacyPage() {
     <>
       <CustomCursor />
       <Navbar />
-      <main className="min-h-screen pb-24 pt-28">
+      <main id="main" className="min-h-screen pb-24 pt-28">
         <div className="mx-auto max-w-3xl px-6">
           <div className="mb-12">
             <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">
