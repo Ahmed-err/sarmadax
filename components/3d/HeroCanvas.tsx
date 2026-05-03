@@ -31,6 +31,21 @@ const FRAG = /* glsl */ `
   }
 `;
 
+// ─── Seeded PRNG (mulberry32) ─────────────────────────────────────────────────
+// Used inside useMemo so the result is deterministic across re-renders and
+// satisfies the react-hooks/purity rule (Math.random is impure).
+
+function makePRNG(seed: number) {
+  let s = seed;
+  return () => {
+    s |= 0;
+    s = (s + 0x6d2b79f5) | 0;
+    let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
 // ─── Camera rig ───────────────────────────────────────────────────────────────
 
 function CameraRig({
@@ -40,6 +55,7 @@ function CameraRig({
 }) {
   const { camera } = useThree();
   useFrame(() => {
+    // eslint-disable-next-line react-hooks/immutability -- R3F camera mutation inside useFrame
     camera.position.x += (mouseRef.current[0] * 1.6 - camera.position.x) * 0.04;
     camera.position.y += (-mouseRef.current[1] * 1.0 - camera.position.y) * 0.04;
     camera.lookAt(0, 0, 0);
@@ -66,27 +82,28 @@ function ParticleField({
   const pointsRef = useRef<THREE.Points>(null!);
 
   const { positions, sizes, colors, phases } = useMemo(() => {
+    const rng = makePRNG(count);
     const positions = new Float32Array(count * 3);
     const sizes = new Float32Array(count);
     const colors = new Float32Array(count * 3);
     const phases = new Float32Array(count * 2);
 
     for (let i = 0; i < count; i++) {
-      const theta = Math.random() * Math.PI * 2;
-      const phi = Math.acos(2 * Math.random() - 1);
-      const r = Math.pow(Math.random(), 0.45) * 15;
+      const theta = rng() * Math.PI * 2;
+      const phi = Math.acos(2 * rng() - 1);
+      const r = Math.pow(rng(), 0.45) * 15;
       positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
       positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta) * 0.55;
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 8;
-      sizes[i] = Math.random() * 1.0 + 0.3;
-      phases[i * 2] = Math.random() * Math.PI * 2;
-      phases[i * 2 + 1] = Math.random() * Math.PI * 2;
-      const t = Math.random();
+      positions[i * 3 + 2] = (rng() - 0.5) * 8;
+      sizes[i] = rng() * 1.0 + 0.3;
+      phases[i * 2] = rng() * Math.PI * 2;
+      phases[i * 2 + 1] = rng() * Math.PI * 2;
+      const t = rng();
       let col: THREE.Color;
-      if (t < 0.45) col = C1.clone().lerp(C4, Math.random());
-      else if (t < 0.72) col = C1.clone().lerp(C2, Math.random());
-      else col = C3.clone().lerp(C2, Math.random());
-      col.multiplyScalar(0.55 + Math.random() * 0.7);
+      if (t < 0.45) col = C1.clone().lerp(C4, rng());
+      else if (t < 0.72) col = C1.clone().lerp(C2, rng());
+      else col = C3.clone().lerp(C2, rng());
+      col.multiplyScalar(0.55 + rng() * 0.7);
       colors[i * 3] = col.r;
       colors[i * 3 + 1] = col.g;
       colors[i * 3 + 2] = col.b;
@@ -168,14 +185,15 @@ function ConnectionLines({
   const linesRef = useRef<THREE.LineSegments>(null!);
 
   const pairs = useMemo<[number, number][]>(() => {
+    const rng = makePRNG(count + 1);
     const p: [number, number][] = [];
     const seen = new Set<number>();
     const target = Math.min(300, Math.floor(count * 0.27));
     let tries = 0;
     while (p.length < target && tries < target * 10) {
       tries++;
-      const a = Math.floor(Math.random() * count);
-      const b = Math.floor(Math.random() * count);
+      const a = Math.floor(rng() * count);
+      const b = Math.floor(rng() * count);
       const key = Math.min(a, b) * count + Math.max(a, b);
       if (a !== b && !seen.has(key)) {
         seen.add(key);
@@ -210,6 +228,8 @@ function ConnectionLines({
       arr[i * 6] = src[a * 3]; arr[i * 6 + 1] = src[a * 3 + 1]; arr[i * 6 + 2] = src[a * 3 + 2];
       arr[i * 6 + 3] = src[b * 3]; arr[i * 6 + 4] = src[b * 3 + 1]; arr[i * 6 + 5] = src[b * 3 + 2];
     }
+    // R3F idiom: material property mutation inside useFrame is intentional.
+    // eslint-disable-next-line react-hooks/immutability
     mat.opacity = 0.045 + Math.sin(clock.getElapsedTime() * 0.38) * 0.028;
     linesRef.current.geometry.attributes.position.needsUpdate = true;
   });
@@ -325,11 +345,14 @@ export default function HeroCanvas({
 }) {
   const mouseRef = useRef<[number, number]>([0, 0]);
   const scrollRef = useRef(0);
-  const [isMobile, setIsMobile] = useState(false);
+  // Lazy initializer reads matchMedia once on mount — no synchronous setState
+  // inside an effect, which avoids the react-hooks/set-state-in-effect violation.
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches
+  );
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 768px)");
-    setIsMobile(mq.matches);
     const onChange = (e: MediaQueryListEvent) => setIsMobile(e.matches);
     mq.addEventListener("change", onChange);
     return () => mq.removeEventListener("change", onChange);

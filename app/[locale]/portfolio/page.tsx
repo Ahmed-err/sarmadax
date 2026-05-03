@@ -4,11 +4,10 @@ import Image from "next/image";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 import { ExternalLink, GitBranch } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { CustomCursor } from "@/components/shared/CustomCursor";
 import { projects, type ProjectCategory } from "@/lib/projects";
 
 type Category = "all" | ProjectCategory;
@@ -25,7 +24,6 @@ export default function PortfolioPage() {
 
   return (
     <>
-      <CustomCursor />
       <Navbar />
       <main id="main" className="min-h-screen pt-28 pb-24">
         <div className="mx-auto max-w-7xl px-6">

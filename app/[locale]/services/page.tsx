@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { CustomCursor } from "@/components/shared/CustomCursor";
 
 const serviceKeys = ["saas", "webApp", "mobile", "design", "ai", "api", "ecommerce", "maintenance"] as const;
 const serviceIcons = [LayoutDashboard, Globe, Smartphone, Palette, Bot, Plug, ShoppingCart, Wrench];
@@ -21,7 +20,6 @@ export default function ServicesPage() {
 
   return (
     <>
-      <CustomCursor />
       <Navbar />
       <main id="main" className="min-h-screen pt-28 pb-24">
         <div className="mx-auto max-w-7xl px-6">

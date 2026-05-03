@@ -1,27 +1,26 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/lib/navigation";
 import { useTransition } from "react";
 import { motion } from "framer-motion";
 
 export function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
+  const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
 
-  const toggle = async () => {
+  const toggle = () => {
     const next = locale === "en" ? "ar" : "en";
-    await fetch("/api/locale", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ locale: next }),
+    startTransition(() => {
+      router.replace(pathname, { locale: next });
     });
-    startTransition(() => router.refresh());
   };
 
   return (
     <motion.button
+      type="button"
       onClick={toggle}
       disabled={isPending}
       whileHover={{ scale: 1.05 }}

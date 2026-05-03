@@ -1,6 +1,6 @@
+import { setRequestLocale } from "next-intl/server";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { CustomCursor } from "@/components/shared/CustomCursor";
 import { HeroSection } from "@/sections/HeroSection";
 import { ServicesSection } from "@/sections/ServicesSection";
 import { StatsSection } from "@/sections/StatsSection";
@@ -10,10 +10,16 @@ import { FeaturedProjectsSection } from "@/sections/FeaturedProjectsSection";
 import { TestimonialsSection } from "@/sections/TestimonialsSection";
 import { CTASection } from "@/sections/CTASection";
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
-      <CustomCursor />
       <Navbar />
       <main id="main">
         <HeroSection />

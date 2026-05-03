@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { getLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { CustomCursor } from "@/components/shared/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -22,8 +21,8 @@ const content = {
         body: (
           <>
             <p>
-              These Terms of Service ("Terms") govern the relationship between Sarmadax ("we",
-              "us", "our") and any individual or entity ("Client", "you") that engages Sarmadax
+              These Terms of Service (&ldquo;Terms&rdquo;) govern the relationship between Sarmadax (&ldquo;we&rdquo;,
+              &ldquo;us&rdquo;, &ldquo;our&rdquo;) and any individual or entity (&ldquo;Client&rdquo;, &ldquo;you&rdquo;) that engages Sarmadax
               for digital services — including web development, mobile app development, UI/UX
               design, AI integration, and related work.
             </p>
@@ -131,7 +130,7 @@ const content = {
               rounds for design, unlimited for bug fixes within the agreed scope).
             </p>
             <p>
-              A "revision" means adjustments to existing deliverables based on feedback. New
+              A &ldquo;revision&rdquo; means adjustments to existing deliverables based on feedback. New
               features or significant design changes requested after a revision round has started
               are treated as scope changes and quoted separately.
             </p>
@@ -295,8 +294,8 @@ const content = {
         body: (
           <>
             <p>
-              تحكم شروط الخدمة هذه ("الشروط") العلاقة بين Sarmadax ("نحن"، "لنا"، "خاصتنا")
-              وأي فرد أو جهة ("العميل"، "أنت") تتعامل مع Sarmadax للحصول على خدمات رقمية —
+              تحكم شروط الخدمة هذه (&ldquo;الشروط&rdquo;) العلاقة بين Sarmadax (&ldquo;نحن&rdquo;، &ldquo;لنا&rdquo;، &ldquo;خاصتنا&rdquo;)
+              وأي فرد أو جهة (&ldquo;العميل&rdquo;، &ldquo;أنت&rdquo;) تتعامل مع Sarmadax للحصول على خدمات رقمية —
               بما فيها تطوير الويب، تطوير التطبيقات، تصميم UI/UX، تكامل الذكاء الاصطناعي،
               والأعمال ذات الصلة.
             </p>
@@ -400,7 +399,7 @@ const content = {
               محدود لإصلاح الأخطاء ضمن النطاق المتفق عليه).
             </p>
             <p>
-              تعني "المراجعة" تعديلات على المخرجات القائمة بناءً على الملاحظات. تُعامَل
+              تعني &ldquo;المراجعة&rdquo; تعديلات على المخرجات القائمة بناءً على الملاحظات. تُعامَل
               الميزات الجديدة أو التغييرات الجوهرية في التصميم المطلوبة بعد بدء جولة
               المراجعة على أنها تغييرات في النطاق وتُقتبس بشكل منفصل.
             </p>
@@ -550,13 +549,17 @@ const content = {
   },
 };
 
-export default async function TermsPage() {
-  const locale = await getLocale();
+export default async function TermsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const c = locale === "ar" ? content.ar : content.en;
 
   return (
     <>
-      <CustomCursor />
       <Navbar />
       <main id="main" className="min-h-screen pb-24 pt-28">
         <div className="mx-auto max-w-3xl px-6">

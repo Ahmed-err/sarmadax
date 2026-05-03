@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, GitBranch, ExternalLink } from "lucide-react";

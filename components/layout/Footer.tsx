@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
@@ -80,13 +80,18 @@ export function Footer() {
           {/* Brand */}
           <motion.div custom={0} initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} className="md:col-span-1">
             <Link href="/" className="mb-4 inline-block">
-              <Image
-                src="/images/logo/wordmark.png"
-                alt="Sarmadax"
-                width={140}
-                height={30}
-                className="h-[30px] w-auto object-contain"
-              />
+              <span className="flex items-center gap-2">
+                <Image
+                  src="/images/logo/icon.png"
+                  alt=""
+                  width={30}
+                  height={30}
+                  className="h-[30px] w-[30px]"
+                />
+                <span className="text-lg font-semibold tracking-tight text-foreground">
+                  sarmada<span className="gradient-text">x</span>
+                </span>
+              </span>
             </Link>
             <p className="mb-6 text-sm leading-relaxed text-text-secondary">{t("tagline")}</p>
             <div className="flex items-center gap-3">

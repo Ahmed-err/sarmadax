@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
@@ -57,14 +57,19 @@ export function Navbar() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 400, damping: 20 }}
                 >
-                  <Image
-                    src="/images/logo/wordmark.png"
-                    alt="Sarmadax"
-                    width={160}
-                    height={34}
-                    className="h-[34px] w-auto object-contain"
-                    priority
-                  />
+                  <span className="flex items-center gap-2">
+                    <Image
+                      src="/images/logo/icon.png"
+                      alt=""
+                      width={34}
+                      height={34}
+                      className="h-[34px] w-[34px]"
+                      priority
+                    />
+                    <span className="text-xl font-semibold tracking-tight text-foreground">
+                      sarmada<span className="gradient-text">x</span>
+                    </span>
+                  </span>
                 </motion.div>
               </Link>
             </MagneticElement>

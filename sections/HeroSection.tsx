@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 import dynamic from "next/dynamic";
 import { useTranslations, useLocale } from "next-intl";
 import {

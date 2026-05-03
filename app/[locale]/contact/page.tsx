@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle2, AlertCircle, Mail, Clock, MapPin, Phone } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { CustomCursor } from "@/components/shared/CustomCursor";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -80,7 +79,6 @@ export default function ContactPage() {
 
   return (
     <>
-      <CustomCursor />
       <Navbar />
       <main id="main" className="min-h-screen pt-28 pb-24">
         <div className="mx-auto max-w-7xl px-6">

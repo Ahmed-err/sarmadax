@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { getLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { CustomCursor } from "@/components/shared/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -22,7 +21,7 @@ const content = {
         body: (
           <>
             <p>
-              Sarmadax ("we", "us", "our") is a boutique digital agency operated by Ahmed. This
+              Sarmadax (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) is a boutique digital agency operated by Ahmed. This
               Privacy Policy explains what information we collect when you visit{" "}
               <strong>sarmadax.com</strong>, how we use it, and your rights regarding that
               information.
@@ -79,10 +78,10 @@ const content = {
             <p>
               Contact form submissions are delivered to us via{" "}
               <strong>Resend</strong> (resend.com), an email infrastructure service. Your
-              submitted data passes through Resend's servers to be delivered as an email. Resend
+              submitted data passes through Resend&#39;s servers to be delivered as an email. Resend
               processes this data as a data processor on our behalf. See{" "}
               <a href="https://resend.com/privacy" target="_blank" rel="noopener noreferrer">
-                Resend&apos;s Privacy Policy
+                Resend&#39;s Privacy Policy
               </a>{" "}
               for details.
             </p>
@@ -180,7 +179,7 @@ const content = {
         body: (
           <p>
             We may update this Privacy Policy from time to time. When we do, we will update the
-            "Last updated" date at the top of this page. Continued use of the website after
+            &ldquo;Last updated&rdquo; date at the top of this page. Continued use of the website after
             changes constitutes acceptance of the revised policy.
           </p>
         ),
@@ -206,7 +205,7 @@ const content = {
         body: (
           <>
             <p>
-              Sarmadax ("نحن"، "لنا"، "خاصتنا") هي وكالة رقمية متخصصة يديرها أحمد. توضح سياسة
+              Sarmadax (&ldquo;نحن&rdquo;، &ldquo;لنا&rdquo;، &ldquo;خاصتنا&rdquo;) هي وكالة رقمية متخصصة يديرها أحمد. توضح سياسة
               الخصوصية هذه المعلومات التي نجمعها عند زيارتك لـ <strong>sarmadax.com</strong>،
               وكيفية استخدامها، وحقوقك المتعلقة بها.
             </p>
@@ -361,8 +360,8 @@ const content = {
         title: "9. التغييرات على هذه السياسة",
         body: (
           <p>
-            قد نحدّث سياسة الخصوصية هذه من وقت لآخر. عند التحديث، سنغيّر تاريخ "آخر
-            تحديث" في أعلى هذه الصفحة. يُعدّ استمرار استخدام الموقع بعد التغييرات قبولاً
+            قد نحدّث سياسة الخصوصية هذه من وقت لآخر. عند التحديث، سنغيّر تاريخ &ldquo;آخر
+            تحديث&rdquo; في أعلى هذه الصفحة. يُعدّ استمرار استخدام الموقع بعد التغييرات قبولاً
             للسياسة المحدّثة.
           </p>
         ),
@@ -380,13 +379,17 @@ const content = {
   },
 };
 
-export default async function PrivacyPage() {
-  const locale = await getLocale();
+export default async function PrivacyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const c = locale === "ar" ? content.ar : content.en;
 
   return (
     <>
-      <CustomCursor />
       <Navbar />
       <main id="main" className="min-h-screen pb-24 pt-28">
         <div className="mx-auto max-w-3xl px-6">

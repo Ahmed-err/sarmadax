@@ -8,10 +8,10 @@ export const contentType = "image/png";
 export const runtime = "nodejs";
 
 export default async function OGImage() {
-  const wordmark = await readFile(
-    path.join(process.cwd(), "public", "images", "logo", "wordmark.png"),
+  const icon = await readFile(
+    path.join(process.cwd(), "public", "images", "logo", "icon.png"),
   );
-  const wordmarkSrc = `data:image/png;base64,${wordmark.toString("base64")}`;
+  const iconSrc = `data:image/png;base64,${icon.toString("base64")}`;
 
   return new ImageResponse(
     (
@@ -58,9 +58,13 @@ export default async function OGImage() {
         />
 
         {/* Logo row */}
-        <div style={{ display: "flex", alignItems: "center", position: "relative" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={wordmarkSrc} alt="Sarmadax" style={{ height: 46, width: "auto" }} />
+        <div style={{ display: "flex", alignItems: "center", gap: 14, position: "relative" }}>
+          {/* next/image not supported inside ImageResponse — img is intentional */}
+          <img src={iconSrc} alt="" style={{ height: 46, width: 46 }} />
+          <div style={{ display: "flex", fontSize: 32, fontWeight: 700, fontFamily: "sans-serif", letterSpacing: -0.5 }}>
+            <span style={{ color: "#f0f4f8" }}>sarmada</span>
+            <span style={{ color: "#0ea5e9" }}>x</span>
+          </div>
         </div>
 
         {/* Main content */}

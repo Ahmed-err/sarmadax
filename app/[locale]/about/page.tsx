@@ -6,7 +6,6 @@ import Image from "next/image";
 import { Code2, Palette, Heart, Star, Award, CheckCircle2 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { CustomCursor } from "@/components/shared/CustomCursor";
 
 const techStack = [
   { name: "Next.js", categoryKey: "Frontend" },
@@ -34,7 +33,6 @@ export default function AboutPage() {
 
   return (
     <>
-      <CustomCursor />
       <Navbar />
       <main id="main" className="min-h-screen pt-28 pb-24">
         <div className="mx-auto max-w-7xl px-6">
@@ -87,6 +85,7 @@ export default function AboutPage() {
                     fill
                     className="object-cover"
                     priority
+                    sizes="96px"
                   />
                 </div>
                 <div className="text-center">

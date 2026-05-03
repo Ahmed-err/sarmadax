@@ -14,6 +14,8 @@ function CountUp({ end, duration = 2 }: { end: number; duration?: number }) {
   useEffect(() => {
     if (!inView) return;
     if (reducedMotion) {
+      // Intentional: skips animation entirely when motion is reduced.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setCount(end);
       return;
     }
