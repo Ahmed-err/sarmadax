@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/og-image.png",
-        width: 1983,
-        height: 793,
-        alt: "Sarmadax — Building Digital Solutions That Drive Tomorrow",
+        width: 1200,
+        height: 630,
+        alt: "Sarmadax — We Build Digital Products That Scale",
       },
     ],
   },
